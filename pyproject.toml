@@ -1,0 +1,60 @@
+[project]
+name = "bank-marketing-dataops"
+version = "0.2.0"
+description = "Pipeline DataOps/MLOps para dataset bancario"
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+
+authors = [
+    { name = "iamunknow-010", email = "xxkatto01xx@gmail.com" }
+]
+
+dependencies = [
+
+    "pandas>=2.2.2,<3.0.0",
+    "numpy>=2.0.0,<3.0.0",
+    "pydantic>=2.13.4,<3.0.0",
+    "loguru>=0.7.3,<0.8.0",
+    "python-dotenv>=1.0.1,<2.0.0",
+    "cryptography>=42.0.0,<49.0.0",
+    "joblib>=1.4.2,<2.0.0",
+    "typing-extensions>=4.12.0,<5.0.0",
+
+    "supabase>=2.5.0,<3.0.0",
+    "fastapi>=0.116.0,<1.0.0",
+    "uvicorn>=0.35.0,<1.0.0",
+    "scikit-learn>=1.7.0,<2.0.0",
+    "pyarrow>=21.0.0,<22.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0,<10.0.0",
+    "black>=24.0.0,<25.0.0",
+    "ruff>=0.12.0,<1.0.0",
+    "mypy>=1.16.0,<2.0.0",
+    "ipykernel>=6.29.0,<7.0.0"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+ignore_missing_imports = true

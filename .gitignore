@@ -1,0 +1,13 @@
+# Entorno virtual de Poetry
+.venv/
+
+# Datos locales (Inmutables y pesados, prohibido subirlos)
+data/raw/*
+data/processed/*
+logs/*
+
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+
+.env

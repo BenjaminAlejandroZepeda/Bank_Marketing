@@ -1,0 +1,10 @@
+services:
+  pipeline:
+    build: .
+    container_name: bank_marketing_pipeline
+    volumes:
+      # Vincula tus carpetas locales para que los logs y datos procesados se guarden en tu PC real
+      - ./data:/app/data
+      - ./logs:/app/logs
+    env_file:
+      - .env
