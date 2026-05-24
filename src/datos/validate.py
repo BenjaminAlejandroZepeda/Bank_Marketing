@@ -1,20 +1,14 @@
 import pandas as pd
 import numpy as np
-
+from src.utils.monitoring import log
+from src.utils.config import EXPECTED_FLAG_COLS
 from src.utils.monitoring import (
 log,
 _semaforo,
 )
-
 from src.utils.config import (
 ALL_EXPECTED_COLS,
 )
-
-
-import pandas as pd
-
-from src.utils.monitoring import log
-from src.utils.config import EXPECTED_FLAG_COLS
 
 
 
